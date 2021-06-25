@@ -9,3 +9,16 @@ while on a(n) main branch
 
 -u means upstream
 origin means current repository
+
+# When pushing to a non-default branch,
+# you need to specify the source ref and the target ref:
+git push origin branch1:branch2
+#Or
+git push <remote> <branch with new changes>:<branch you are pushing to>
+
+to delete a branch LOCALLY
+git branch -d <branch_name>
+
+if you gpg key added to github
+git commit -S -m ""
+-S means you have a key
