@@ -1,0 +1,11 @@
+while on a(n) main branch
+
+    //locally creates a new branch
+1. git checkout -b <branchnameyouwant> <wheretobranchfrom>
+    //make some changes and commit them
+2. git add ., git commit -m""
+    //push upstream into the new branch to show remotely
+3. git push -u origin <branchnameyouwant>
+
+-u means upstream
+origin means current repository
