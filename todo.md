@@ -8,7 +8,11 @@
 - aside element that reads json files for other sites to go to
 
 ### css todo
-- good color format
+- good color format (look more into the color pallete)
+- hover on list with nav
+- when an anchor is clicked leave it highlighted
+- Incorporate terminal font 
+- refactor code
 
 ### readme todo
 - add reflog to roll back commits
