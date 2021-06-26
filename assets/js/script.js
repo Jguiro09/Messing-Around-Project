@@ -10,6 +10,17 @@ function logkey(event) {
         consoleTextInput.children[0].innerHTML = "";
         drawAllItems();
     }
+    if (event.key == "j") {
+        testArrayOfStuff = testArrayOfStuff.concat('wiggles');
+        consoleTextInput.children[0].innerHTML = "";
+        drawAllItems();
+    }
+    if (event.key == "k") {
+        testArrayOfStuff.shift();
+        testArrayOfStuff = testArrayOfStuff.concat('234eergaergaer');
+        consoleTextInput.children[0].innerHTML = "";
+        drawAllItems();
+    }
 }
 
 function drawAllItems() {
@@ -17,7 +28,7 @@ function drawAllItems() {
         var listItem = document.createElement("li");
         listItem.textContent = testArrayOfStuff[index];
         consoleTextInput.children[0].appendChild(listItem);
-        listItem.setAttribute("style", " color:white; background: #777777; padding: 5px; margin-left: 35px;");
+        listItem.setAttribute("style", " color:white; background: #777777; padding: 5px;");
     }
 }
 
@@ -28,7 +39,7 @@ function init(){
 document.addEventListener("keydown", logkey);
 
 init();
-// 1. take input
+//g 1. take input
 // 2. check if correct syntax
 // 3. 
 // 4. box with multiple lines

@@ -8,6 +8,28 @@ main {
     width: 100%;
 }
 
+
+
+#console {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+#console ul {
+    background: purple;
+    width: 100%;
+}
+
+#tests {
+    background: blue;
+    width: 100%;
+}
+
+#tests img {
+    max-width: 100%;
+}
+
 #left {
     width: 50%;
     height: 70vh;
@@ -15,6 +37,9 @@ main {
 }
 
 #right {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
     width: 50%;
     background: red;
 }
