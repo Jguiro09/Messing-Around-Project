@@ -1,35 +1,43 @@
 consoleTextInput = document.querySelector("#console");
+logOfPreviousMsg = [`Person@Persons-PC MINGW64 ~/Documents/git-test-repo (testbranch)`, `$ git add .`, `Person@Persons-PC MINGW64 ~/Document/git-test-repo (testbranch)`, `$ git commit -m "finally added a div in my div"`, `Person@Persons-PC MINGW64 ~/Document/git-test-repo (testbranch)`, `$ git push -u origin personalBranch`]
 
-testArrayOfStuff = ['apples', 'reaching out', 'touching me', `good times never seem so good`, `im feeling sad`, `to believe there never was oh no no`];
+function removeTopItemInList(){
+    logOfPreviousMsg.shift();
+    drawAllItems();
+}
+
+function addBottomItemInList(newStr){
+    if(typeof newStr != "string");
+    logOfPreviousMsg = logOfPreviousMsg.concat(newStr);
+}
+
 
 function logkey(event) {
-    console.log(event.key.toUpperCase());
+    console.log(event.key);
+    console.log(consoleTextInput.children[0]);
 
-    if (event.key == "h") {
+    var currentAmountOfChildrenInList = consoleTextInput.children[0].length;
+    var tempTextContent = consoleTextInput.children[0].children[0].textContent; //get current bottom row text content
+    consoleTextInput.children[consoleTextInput.children - 1].textContent = tempTextContent + event.key; //add current bottom text with new character choice
+
+    if (event.key == "ENTER") {
         testArrayOfStuff.shift();
-        consoleTextInput.children[0].innerHTML = "";
-        drawAllItems();
-    }
-    if (event.key == "j") {
-        testArrayOfStuff = testArrayOfStuff.concat('wiggles');
-        consoleTextInput.children[0].innerHTML = "";
-        drawAllItems();
-    }
-    if (event.key == "k") {
-        testArrayOfStuff.shift();
-        testArrayOfStuff = testArrayOfStuff.concat('234eergaergaer');
         consoleTextInput.children[0].innerHTML = "";
         drawAllItems();
     }
 }
 
 function drawAllItems() {
-    for (let index = 0; index < testArrayOfStuff.length; index++) {
+    for (let index = 0; index < logOfPreviousMsg.length; index++) {
         var listItem = document.createElement("li");
-        listItem.textContent = testArrayOfStuff[index];
+        listItem.textContent = logOfPreviousMsg[index];
         consoleTextInput.children[0].appendChild(listItem);
         listItem.setAttribute("style", " color:white; background: #777777; padding: 5px;");
     }
+    var listItem = document.createElement("li");
+    listItem.textContent = `$ `;
+    consoleTextInput.children[0].appendChild(listItem);
+    listItem.setAttribute("style", " color:white; background: #777777; padding: 5px;");
 }
 
 function init(){
