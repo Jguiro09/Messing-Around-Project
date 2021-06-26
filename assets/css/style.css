@@ -90,7 +90,7 @@ aside
 aside ul li
 {
     font-size: 125%;
-    padding: .32vh 0;
+    padding: .32vh .5vh;
     border: 1px solid white;
 }
 
@@ -110,6 +110,25 @@ aside ul li
     width: 100%;
 }
 
+#testConsoleDiv ul li
+{
+    font-family: Lucida Console;
+    color:white; 
+    background: #9a9a9a; 
+    padding: 5px;
+}
+
+#testConsoleDiv ul li:nth-child(odd)
+{
+    background-color: #808080;
+}
+
+#tests
+{
+    height: 63%;
+    align-self: center;
+}
+
 #tests img {
     max-width: 100%;
     max-height: 80%;
@@ -118,14 +137,14 @@ aside ul li
 #left {
     width: 50%;
     height: 70vh;
-
+    border: 1px solid var(--border-color);
     background: var(--inside-box);
 }
 
 #right {
     width: 50%;
     height: 70vh;
-
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     padding: 1rem;
