@@ -131,6 +131,6 @@ aside ul li
     display: flex;
     flex-direction: column;
     width: 50%;
-    background: red;
-    
+    background: var(--inside-box);
+    border: 10px solid var(--border-color);
 }
