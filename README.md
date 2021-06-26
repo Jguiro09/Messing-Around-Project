@@ -28,6 +28,6 @@
 ### **To delete a branch LOCALLY**
 ``git branch -d <branch name>``
 
-### **if you gpg key added to github**
+### **if you have a gpg key added to github**
 ``git commit -S -m ""  ``  
 >-S means you have a key
