@@ -11,18 +11,22 @@
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
+/* HEADER ADJUSTMENTS  --------------------------------------------------------------------------------------------*/
 header
 {
     display: flex;
     height: 7vh;
     background-color: var(--header-color);
     align-items: center;
-    flex-wrap: wrap;
+}
+
+header ul li, header img, header h1
+{
+    float: left;
 }
 
 header img
 {
-    float: left;
     margin-left: 2vw;
     height: 3.4vh;
 }
@@ -33,17 +37,20 @@ header ul
     margin-right: 17vw;
 }
 
-header ul li
-{
-    font-size: 150%;
-    float: left;
-}
-
 header a
 {
-    display: block;
-    text-align: center;
+    font-size: 150%;
     padding: 1vh 1vw;
+}
+
+header a:hover
+{
+    background-color: var(--border-color);
+}
+
+header a:focus
+{
+    background-color: var(--border-color);
 }
 
 header a, h1
@@ -54,11 +61,11 @@ header a, h1
 
 header h1
 {
-    float: left;
     font-size: 175%;
     padding: .5vh .5vw 0;
-    align-self: flex-end;
 }
+
+/* END OF HEADER ADJUSTMENTS ----------------------------------------------------------------------------------------- */
 
 body
 {
