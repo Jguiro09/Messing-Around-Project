@@ -1,7 +1,7 @@
 testConsoleDiv = document.querySelector("#testConsoleDiv");
 logOfPreviousMsg = [`$ `, `$ `, `Person@Persons-PC MINGW64 ~/Documents/git-test-repo (testbranch)`, `$ git add .`, `Person@Persons-PC MINGW64 ~/Document/git-test-repo (testbranch)`, `$ git commit -m "finally added a div in my div"`, `Person@Persons-PC MINGW64 ~/Document/git-test-repo (testbranch)`, `$ git push -u origin personalBranch`]
 approvedCharacters = [8, 13, 27, 32, 186];
-liItemStyling = `color:white; background: #777777; padding: 5px;`;
+// liItemStyling = `color:white; background: #777777; padding: 5px;`;
 
 function removeTopItemInList(){
     logOfPreviousMsg.shift();
@@ -20,12 +20,12 @@ function drawAllItems() { //recreates all the list items
         var listItem = document.createElement("li"); //create a new list item
         listItem.textContent = logOfPreviousMsg[index]; //fill the text content with the prefilled content at this index
         testConsoleDiv.querySelector("ul").appendChild(listItem); //add this to the bottom of the current list so keep piling them on
-        listItem.setAttribute("style", liItemStyling); //style this with a preset variable so all are uniform and can be styled
+        // listItem.setAttribute("style", liItemStyling); //style this with a preset variable so all are uniform and can be styled
     }
     var listItem = document.createElement("li"); //create a final list item line for text to enter
     listItem.textContent = `$ `; //set text to '$ '
     testConsoleDiv.querySelector("ul").appendChild(listItem); //add this final list item to the bottom
-    listItem.setAttribute("style", liItemStyling); //style uniform to others
+    // listItem.setAttribute("style", liItemStyling); //style uniform to others
     listItem.setAttribute("id", "textbox") //give it an id so we can easily reference this one out of all the others
 }
 
