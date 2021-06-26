@@ -110,27 +110,24 @@ aside ul li
     width: 100%;
 }
 
-#tests {
-    background: blue;
-    width: 100%;
-}
-
 #tests img {
     max-width: 100%;
+    max-height: 80%;
 }
 
 #left {
     width: 50%;
     height: 70vh;
+
     background: var(--inside-box);
-    border: 10px solid var(--border-color);
 }
 
 #right {
-    padding: 1rem;
+    width: 50%;
+    height: 70vh;
+
     display: flex;
     flex-direction: column;
-    width: 50%;
+    padding: 1rem;
     background: var(--inside-box);
-    border: 10px solid var(--border-color);
 }
