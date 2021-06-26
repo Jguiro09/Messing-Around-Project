@@ -12,7 +12,7 @@
 ### **push upstream into the new branch to show remotely**
 ```git push -u origin <branch name you want>```
 >-u means upstream  
->origin means current repositor  
+>origin means current repository  
 
 <br>
 
@@ -28,6 +28,6 @@
 ### **To delete a branch LOCALLY**
 ``git branch -d <branch name>``
 
-### **if you gpg key added to github**
+### **if you have a gpg key added to github**
 ``git commit -S -m ""  ``  
 >-S means you have a key
