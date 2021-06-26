@@ -14,23 +14,23 @@ function addBottomItemInList(newStr){
     drawAllItems();
 }
 
-function drawAllItems() {
-    testConsoleDiv.children[0].innerHTML = '';
+function drawAllItems() { //recreates all the list items
+    testConsoleDiv.querySelector("ul").innerHTML = '';//clears anything that could be inside the <ul> </ul> tags so list always will start empty
     for (let index = 0; index < logOfPreviousMsg.length; index++) { //loop over all the prefilled text the console comes with for this scenario
         var listItem = document.createElement("li"); //create a new list item
         listItem.textContent = logOfPreviousMsg[index]; //fill the text content with the prefilled content at this index
-        testConsoleDiv.children[0].appendChild(listItem); //add this to the bottom of the current list so keep piling them on
+        testConsoleDiv.querySelector("ul").appendChild(listItem); //add this to the bottom of the current list so keep piling them on
         listItem.setAttribute("style", liItemStyling); //style this with a preset variable so all are uniform and can be styled
     }
     var listItem = document.createElement("li"); //create a final list item line for text to enter
     listItem.textContent = `$ `; //set text to '$ '
-    testConsoleDiv.children[0].appendChild(listItem); //add this final list item to the bottom
+    testConsoleDiv.querySelector("ul").appendChild(listItem); //add this final list item to the bottom
     listItem.setAttribute("style", liItemStyling); //style uniform to others
     listItem.setAttribute("id", "textbox") //give it an id so we can easily reference this one out of all the others
 }
 
 function checkSubmission() {
-    testConsoleDiv
+    console.log(testConsoleDiv.querySelector("ul").dataset.answer)
 }
 
 function keyDownEvent(event) { //every time a key is pressed anywhere on page
@@ -53,6 +53,7 @@ function keyDownEvent(event) { //every time a key is pressed anywhere on page
         addBottomItemInList(tempTextContent);
         removeTopItemInList();
         removeTopItemInList();
+        checkSubmission(); //call check the submission after all is drawn and submitted so its run after all the additions are made
         return
     }
 
