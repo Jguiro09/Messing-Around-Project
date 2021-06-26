@@ -20,6 +20,9 @@ function keyDownEvent(event) {
     }
 
     if(event.key === `Backspace`){  //backspace
+        if (consoleTextInput.querySelector("#textbox").textContent.length <= 2){
+            return
+        }
         var tempTextContent = consoleTextInput.querySelector("#textbox").textContent; //get current bottom row text content
         consoleTextInput.querySelector("#textbox").textContent = tempTextContent.substring(0, tempTextContent.length - 1); //add current bottom text with new character choice
         return
