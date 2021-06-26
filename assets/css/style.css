@@ -5,6 +5,7 @@
     --text-color: #F0F6FC;
     --inside-box: #0D1117;
     --border-color: #707070;
+    --widthOfSideNav: 13%;
 }
 
 * {
@@ -73,8 +74,7 @@ body
 }
 
 main {
-    padding: 0vh 1vw 0vh 0vw;
-    display: flex;
+    padding: 0vh 1vw var(--widthOfSideNav) 0vw;
     width: 100%;
 }
 
@@ -83,7 +83,7 @@ aside
     float:left;
     color: white;
     background-color: var(--inside-box);
-    width: 13%;
+    width: var(--widthOfSideNav);
     border: 3px solid var(--border-color);
 }
 
@@ -94,9 +94,26 @@ aside ul li
     border: 1px solid white;
 }
 
-#left, #right
+section
 {
-    margin-top: 5vh;
+    width: 80%;
+    height: 100%;
+
+    padding: 5vh var(--widthOfSideNav) 0 0;
+    display:flex;
+    align-items: stretch;
+}
+
+section > div { /* ONLY divs right beneath section */
+    /* Box model stuff */
+    padding: 1rem;
+    border: 10px solid var(--border-color);
+
+    /* Resize adjustments */
+    height: 100%; /* fill up entire section container */
+    width: 50%; /* fill up half of section to share with other side */
+
+    background: var(--inside-box);
 }
 
 #console {
@@ -117,20 +134,13 @@ aside ul li
 
 #tests img {
     max-width: 100%;
+    max-height: 50%;
 }
 
 #left {
-    width: 50%;
-    height: 70vh;
-    background: var(--inside-box);
-    border: 10px solid var(--border-color);
+    background: green
 }
 
 #right {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    background: var(--inside-box);
-    border: 10px solid var(--border-color);
+    background: red;
 }
