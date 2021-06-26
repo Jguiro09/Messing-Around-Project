@@ -37,7 +37,7 @@ header ul
     margin-right: 17vw;
 }
 
-header a
+header ul li a
 {
     font-size: 150%;
     padding: 1vh 1vw;
@@ -73,13 +73,31 @@ body
 }
 
 main {
-    padding: 0vh 10vw 0vh 10vw;
+    padding: 0vh 1vw 0vh 0vw;
     display: flex;
     width: 100%;
-    margin-top: 5vh;
 }
 
+aside
+{
+    float:left;
+    color: white;
+    background-color: var(--inside-box);
+    width: 13%;
+    border: 3px solid var(--border-color);
+}
 
+aside ul li
+{
+    font-size: 125%;
+    padding: .32vh 0;
+    border: 1px solid white;
+}
+
+#left, #right
+{
+    margin-top: 5vh;
+}
 
 #console {
     display: flex;
