@@ -3,10 +3,6 @@ logOfPreviousMsg = [`Person@Persons-PC MINGW64 ~/Documents/git-test-repo (testbr
 approvedCharacters = [8, 13, 27, 32, 186];
 liItemStyling = `color:white; background: #777777; padding: 5px;`;
 
-/*
-add Person@Persons-PC MINGW64 ~/Document/git-test-repo (testbranch) every enter
-*/
-
 function removeTopItemInList(){
     logOfPreviousMsg.shift();
     drawAllItems();
@@ -17,7 +13,6 @@ function addBottomItemInList(newStr){
     logOfPreviousMsg = logOfPreviousMsg.concat(newStr);
     drawAllItems();
 }
-
 
 function keyDownEvent(event) {
     if(!((47 < event.keyCode && event.keyCode <= 90) || approvedCharacters.includes(event.keyCode))){
