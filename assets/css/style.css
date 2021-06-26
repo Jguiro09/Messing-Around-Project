@@ -3,6 +3,8 @@
     --background-color: #090C10;
     --header-color: #161B22;
     --text-color: #F0F6FC;
+    --inside-box: #0D1117;
+    --border-color: #707070;
 }
 
 * {
@@ -12,16 +14,17 @@
 header
 {
     display: flex;
-    height: 10vh;
+    height: 7vh;
     background-color: var(--header-color);
     align-items: center;
     flex-wrap: wrap;
 }
 
-img
+header img
 {
     float: left;
-    margin-left: 1vw;
+    margin-left: 2vw;
+    height: 3.4vh;
 }
 
 header ul
@@ -52,15 +55,21 @@ header a, h1
 header h1
 {
     float: left;
-    font-size: 250%;
-    padding: 2vh.5vw 0;
+    font-size: 175%;
+    padding: .5vh .5vw 0;
     align-self: flex-end;
+}
+
+body
+{
+    background-color: var(--background-color);
 }
 
 main {
     padding: 0vh 10vw 0vh 10vw;
     display: flex;
     width: 100%;
+    margin-top: 5vh;
 }
 
 
@@ -88,7 +97,8 @@ main {
 #left {
     width: 50%;
     height: 70vh;
-    background: green;
+    background: var(--inside-box);
+    border: 10px solid var(--border-color);
 }
 
 #right {
@@ -97,4 +107,5 @@ main {
     flex-direction: column;
     width: 50%;
     background: red;
+    
 }
