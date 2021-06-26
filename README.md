@@ -12,7 +12,7 @@
 ### **push upstream into the new branch to show remotely**
 ```git push -u origin <branch name you want>```
 >-u means upstream  
->origin means current repositor  
+>origin means current repository  
 
 <br>
 
