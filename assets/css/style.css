@@ -20,6 +20,11 @@ header
     align-items: center;
 }
 
+body
+{
+    height: 100%;
+}
+
 header ul li, header img, header h1
 {
     float: left;
@@ -70,9 +75,15 @@ header h1
 body
 {
     background-color: var(--background-color);
+    height: 100%;
 }
 
 main {
+    display: flex;
+}
+
+section
+{
     padding: 0vh 1vw 0vh 0vw;
     display: flex;
     width: 100%;
@@ -80,7 +91,10 @@ main {
 
 aside
 {
+    display: block;
     float:left;
+    height: 93%;
+    overflow: hidden;
     color: white;
     background-color: var(--inside-box);
     width: 13%;
