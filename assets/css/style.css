@@ -20,6 +20,11 @@ header
     align-items: center;
 }
 
+body
+{
+    height: 100%;
+}
+
 header ul li, header img, header h1
 {
     float: left;
@@ -70,9 +75,15 @@ header h1
 body
 {
     background-color: var(--background-color);
+    height: 100%;
 }
 
 main {
+    display: flex;
+}
+
+section
+{
     padding: 0vh 1vw 0vh 0vw;
     display: flex;
     width: 100%;
@@ -80,7 +91,10 @@ main {
 
 aside
 {
+    display: block;
     float:left;
+    height: 93%;
+    overflow: hidden;
     color: white;
     background-color: var(--inside-box);
     width: 13%;
@@ -90,7 +104,7 @@ aside
 aside ul li
 {
     font-size: 125%;
-    padding: .32vh 0;
+    padding: .32vh .5vh;
     border: 1px solid white;
 }
 
@@ -110,27 +124,43 @@ aside ul li
     width: 100%;
 }
 
-#tests {
-    background: blue;
-    width: 100%;
+#testConsoleDiv ul li
+{
+    font-family: Lucida Console;
+    color:white; 
+    background: #9a9a9a; 
+    padding: 5px;
+}
+
+#testConsoleDiv ul li:nth-child(odd)
+{
+    background-color: #808080;
+}
+
+#tests
+{
+    height: 63%;
+    align-self: center;
 }
 
 #tests img {
     max-width: 100%;
+    max-height: 80%;
 }
 
 #left {
     width: 50%;
     height: 70vh;
+    border: 1px solid var(--border-color);
     background: var(--inside-box);
-    border: 10px solid var(--border-color);
 }
 
 #right {
-    padding: 1rem;
+    width: 50%;
+    height: 70vh;
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    width: 50%;
+    padding: 1rem;
     background: var(--inside-box);
-    border: 10px solid var(--border-color);
 }
